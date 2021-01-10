@@ -16,4 +16,6 @@ class Solution:
             self.rev = self.rev + (self.x%10)*(10 **(self.ctr - 1))
             self.x = self.x//10
             self.ctr -= 1
-        return self.flag*self.rev
+        if self.flag*self.rev >= -2147483648 and self.flag*self.rev <= 2147483647:
+            return self.flag*self.rev
+        return 0
